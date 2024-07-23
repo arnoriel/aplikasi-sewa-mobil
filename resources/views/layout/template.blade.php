@@ -29,6 +29,7 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    @livewireStyles
 </head>
 
 <body>
@@ -39,14 +40,8 @@
         <!-- Content Start -->
         <div class="content">
             @include('layout.navbar')
-
-
-            @include('layout.card')
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
+            
                     @yield('content')
-                </div>
-            </div>
 
             @include('layout.footer')
         </div>
@@ -70,6 +65,7 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    @livewireScripts
 </body>
 
 </html>
